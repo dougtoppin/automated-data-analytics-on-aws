@@ -90,7 +90,7 @@ db-dtypes = "1.2.0"
 redshift-connector = {version="2.0.905", optional=true}
 SPARQLWrapper = {version="1.8.5", optional=true}
 pytz = {version=">=2020.1,<2021.9", optional=true} # was "2022.1" but "redshift-connector (2.0.905) which depends on pytz (>=2020.1,<2021.9)"
-pymongo = "^4.3.3"
+pymongo = "^4.6.3"
 oracledb = "^1.3.0"
 
 [tool.pytest.ini_options]
