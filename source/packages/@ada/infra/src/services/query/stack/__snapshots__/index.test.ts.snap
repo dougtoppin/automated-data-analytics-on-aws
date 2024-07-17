@@ -9421,6 +9421,11 @@ Object {
       "Type": "AWS::IAM::Policy",
     },
     "AthenaProxyCloudFrontWebAclPutLoggingConfigurationCustomResourcePolicy3FF902AF": Object {
+      "DependsOn": Array [
+        "AthenaProxyCloudFrontWebAclDeliveryStreamCustomResourcePolicyC97CED61",
+        "AthenaProxyCloudFrontWebAclDeliveryStreamF7BA4D4E",
+        "AthenaProxyCloudFrontWebAclWafWebAcl32FFB8B5",
+      ],
       "Metadata": Object {
         "cfn_nag": Object {
           "rules_to_suppress": Array [
@@ -9459,7 +9464,10 @@ Object {
     "AthenaProxyCloudFrontWebAclPutLoggingConfigurationEAEED235": Object {
       "DeletionPolicy": "Delete",
       "DependsOn": Array [
+        "AthenaProxyCloudFrontWebAclDeliveryStreamCustomResourcePolicyC97CED61",
+        "AthenaProxyCloudFrontWebAclDeliveryStreamF7BA4D4E",
         "AthenaProxyCloudFrontWebAclPutLoggingConfigurationCustomResourcePolicy3FF902AF",
+        "AthenaProxyCloudFrontWebAclWafWebAcl32FFB8B5",
       ],
       "Properties": Object {
         "Create": Object {

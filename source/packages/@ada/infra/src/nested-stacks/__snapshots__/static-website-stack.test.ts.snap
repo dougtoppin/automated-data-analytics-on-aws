@@ -435,7 +435,10 @@ Object {
     "CfWebACLPutLoggingConfiguration143C5EBB": Object {
       "DeletionPolicy": "Delete",
       "DependsOn": Array [
+        "CfWebACLDeliveryStreamCustomResourcePolicy515FA67C",
+        "CfWebACLDeliveryStream722E32A3",
         "CfWebACLPutLoggingConfigurationCustomResourcePolicy0E7E2E97",
+        "CfWebACLWafWebAcl9391E9AC",
       ],
       "Properties": Object {
         "Create": Object {
@@ -469,6 +472,11 @@ Object {
       "UpdateReplacePolicy": "Delete",
     },
     "CfWebACLPutLoggingConfigurationCustomResourcePolicy0E7E2E97": Object {
+      "DependsOn": Array [
+        "CfWebACLDeliveryStreamCustomResourcePolicy515FA67C",
+        "CfWebACLDeliveryStream722E32A3",
+        "CfWebACLWafWebAcl9391E9AC",
+      ],
       "Metadata": Object {
         "cfn_nag": Object {
           "rules_to_suppress": Array [
