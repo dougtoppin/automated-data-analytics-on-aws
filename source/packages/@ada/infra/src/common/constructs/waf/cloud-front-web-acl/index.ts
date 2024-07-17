@@ -173,6 +173,8 @@ export default class CloudFrontWebAcl extends Construct {
         physicalResourceId: PhysicalResourceId.fromResponse('LoggingConfiguration.ResourceArn'),
       },
     });
+    addLoggingCustomResource.node.addDependency(webAcl);
+    addLoggingCustomResource.node.addDependency(deliveryStreamResource);
     addCfnNagSuppressions(
       addLoggingCustomResource.node.findChild('CustomResourcePolicy').node.defaultChild as CfnResource,
       [
